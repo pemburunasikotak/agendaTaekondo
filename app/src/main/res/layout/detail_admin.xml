@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/warnabiru"
+    android:orientation="vertical"
+    tools:context=".admin.DetailAgendaAdmin">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Detail Agenda"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/wanaputih"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_abuabugede"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="deskripsi"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/warnahitam"
+            android:textSize="20sp"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:id="@+id/tv_deskripsidetail"
+            android:layout_width="match_parent"
+            android:layout_height="166dp"
+            android:layout_marginLeft="10dp"
+            android:text="deskripsi"
+            android:textAllCaps="false"
+            android:textColor="@color/warnahitam"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="82dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_bg_abu_abu_radius"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Waktu"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/warnahitam"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/tv_waktudetail"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="Waktu"
+            android:layout_marginLeft="10dp"
+            android:textAllCaps="false"
+            android:textColor="@color/warnahitam"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+        <TextView
+            android:id="@+id/tv_namaDetail"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Waktu"
+            android:layout_marginLeft="10dp"
+            android:textAllCaps="false"
+            android:textColor="@color/warnahitam"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_bg_abu_abu_radius"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Lokasi"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/warnahitam"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/tv_lokasidetail"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginLeft="10dp"
+            android:text="Lokasi"
+            android:textAllCaps="false"
+            android:textColor="@color/warnahitam"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+        <Button
+            android:id="@+id/btn_lokasi"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/ic_bg_biru"
+            android:text="Lokasi"
+            android:textAllCaps="true"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_hasilrapatagenda"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/ic_bg_biru"
+        android:text="Hasil Rapat"
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

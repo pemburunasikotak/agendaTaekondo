@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_registrasi"
+    android:orientation="vertical"
+    tools:context=".anggota.RegistrasiAnggota">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/logoukm"/>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:text="UKM TAEKWONDO"
+            android:textSize="35sp"
+            android:textStyle="bold|italic"
+            android:textColor="@color/warnahitam"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+        <EditText
+            android:id="@+id/et_email_registrasi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:hint="email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/warnahitam"
+            android:background="@drawable/ic_bg_putihradius10"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/et_passwd_registrasi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_bg_putihradius10"
+            android:hint="password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="@color/warnahitam" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+        <EditText
+            android:id="@+id/et_nama_registras"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:hint="Nama"
+            android:inputType="text"
+            android:textColor="@color/warnahitam"
+            android:background="@drawable/ic_bg_putihradius10"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+        <EditText
+            android:id="@+id/et_notelp_registrasi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:hint="Nomer telfon"
+            android:inputType="number"
+            android:textColor="@color/warnahitam"
+            android:background="@drawable/ic_bg_putihradius10"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_create_registrasi"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_bg_biru"
+        android:layout_marginTop="36dp"
+        android:layout_gravity="center"
+        android:textStyle="italic|bold"
+        android:text="Create"/>
+
+</LinearLayout>

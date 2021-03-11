@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#041555"
+    android:orientation="vertical"
+    tools:context=".anggota.daftaragendaanggota.DaftarAgendaAnggota">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="daftar agenda"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_daftaragendaanggota"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_marginTop="30dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_joinChatGrup"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Join Chat grup"
+            android:layout_gravity="center"
+            android:textColor="#FFFF"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/ic_bg_biru"/>
+
+        <Button
+            android:id="@+id/btn_keluaranggota"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_radiusmerah"
+            android:text="keluar"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

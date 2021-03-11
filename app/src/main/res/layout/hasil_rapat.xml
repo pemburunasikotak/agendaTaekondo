@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/warnabiru"
+    android:orientation="vertical"
+    tools:context=".admin.HasilRapatAdmin">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="hasil rapat"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/wanaputih"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="585dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_abuabulebihgede"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_hasilrapat"
+            android:layout_width="325dp"
+            android:layout_height="410dp"
+            android:layout_margin="15dp"
+            android:background="#3763FF"
+            android:text="belum ada hasil"
+            android:textAllCaps="false"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/tv_nameHasilRapat"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textAllCaps="false"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:text="testjudul"
+            android:textAlignment="center"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btn_editRapat"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_bg_biru"
+            android:text="Edit" />
+
+    </LinearLayout>
+
+</LinearLayout>

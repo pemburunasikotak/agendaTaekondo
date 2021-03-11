@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "272692007824",
+    "project_id": "agendataekondo",
+    "storage_bucket": "agendataekondo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272692007824:android:3e80619a2740a367139915",
+        "android_client_info": {
+          "package_name": "com.example.agendaukmtaekondo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "272692007824-bb2dqpdssl360il60oqlvts8qj3kl3au.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.agendaukmtaekondo",
+            "certificate_hash": "c5ee83b49a62b138ef149a66a802825f32ad7ab6"
+          }
+        },
+        {
+          "client_id": "272692007824-ivg3tcisc9kar9itqepg5ldor697ah42.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvmHjvmVZemaN5V5Lhd2Xg9fNcAPD8zN0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "272692007824-ivg3tcisc9kar9itqepg5ldor697ah42.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
