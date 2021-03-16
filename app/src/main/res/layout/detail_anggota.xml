@@ -24,6 +24,19 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btn_hasilrapatagendaanggota"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_bg_biru"
+        android:text="Hasil Rapat"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:textStyle="bold|italic" />
+
     <LinearLayout
         android:layout_width="350dp"
         android:layout_height="200dp"
@@ -90,12 +103,13 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/ic_bg_abu_abu_radius"
         android:orientation="vertical">
+
         <TextView
             android:id="@+id/tv_namaDetailanggota"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text=""
             android:layout_marginLeft="10dp"
+            android:text=""
             android:textAllCaps="false"
             android:textColor="@color/warnahitam"
             android:textSize="15sp"
@@ -136,17 +150,5 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_hasilrapatagendaanggota"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="220dp"
-        android:layout_marginTop="140dp"
-        android:background="@drawable/ic_bg_biru"
-        android:text="Hasil Rapat"
-        android:textAllCaps="false"
-        android:textAlignment="center"
-        android:textSize="15sp"
-        android:textStyle="bold|italic" />
 
 </LinearLayout>

@@ -36,6 +36,7 @@ class DaftarAgendaAnggotaAdapter(private val context: Context, private val anggo
         holder.itemView.setOnClickListener {
             //Kirim paket
             val bundel = Bundle()
+            bundel.putString("name", list.nama.toString())
             bundel.putString("waktu", list.waktu.toString())
             bundel.putString("desk", list.diskripsi.toString())
             bundel.putString("lokasi", list.lokasi.toString())

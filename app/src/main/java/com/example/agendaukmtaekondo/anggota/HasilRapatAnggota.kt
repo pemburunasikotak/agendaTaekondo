@@ -28,10 +28,10 @@ class HasilRapatAnggota : AppCompatActivity() {
                 override fun onDataChange(p0: DataSnapshot) {
                     for (snap in p0.children)
                         rapat = snap.getValue(Rapat::class.java)
-                    if (rapat==null){
-                        tv_hasilrapatAnggota.text="Belum ada data yang di upload"
-                    }else {
+                    if (rapat!=null){
                         tv_hasilrapatAnggota.text = rapat!!.namarapat
+                    }else {
+                        tv_hasilrapatAnggota.text="Belum ada data yang di upload"
                     }
                 }
             })

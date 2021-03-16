@@ -18,6 +18,7 @@ class DetailAgendaAnggota : AppCompatActivity() {
 
         //dari Lihat
         val bundle = intent.extras
+        tv_namaDetailanggota.setText(bundle?.getString("name"))
         tv_waktudetailanggota.setText(bundle?.getString("waktu"))
         tv_deskripsidetailanggota.setText(bundle?.getString("desk"))
         tv_lokasidetailanggota.setText(bundle?.getString("lokasi"))
@@ -35,9 +36,5 @@ class DetailAgendaAnggota : AppCompatActivity() {
             val  i = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps/search/$nama"))
             startActivity(i)
         }
-
-
     }
-
-
 }
