@@ -17,15 +17,17 @@ class EditRapatAdmin : AppCompatActivity() {
     lateinit var ref : DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //deklarasi Firebase
         ref = FirebaseDatabase.getInstance().getReference("Rapat")
         setContentView(R.layout.tambah_hasil_rapat)
 
-
+        //Terima paket data dengankey nama
         val bundle = intent.extras
         et_namarapat.setText(bundle?.getString("nama"))
 
         val idrapat =et_namarapat.text.toString()
 
+        //Fungi ketika Button simpan di Clik
         btn_simpandatarapat.setOnClickListener {
             val namarapat = et_tambahrapat.text.toString().trim()
 

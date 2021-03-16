@@ -90,7 +90,16 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/ic_bg_abu_abu_radius"
         android:orientation="vertical">
-
+        <TextView
+            android:id="@+id/tv_namaDetailanggota"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text=""
+            android:layout_marginLeft="10dp"
+            android:textAllCaps="false"
+            android:textColor="@color/warnahitam"
+            android:textSize="15sp"
+            android:textStyle="italic" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="30dp"

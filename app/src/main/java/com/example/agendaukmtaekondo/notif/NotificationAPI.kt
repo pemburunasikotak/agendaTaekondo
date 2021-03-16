@@ -1,8 +1,6 @@
-package com.example.agendaukmtaekondo.notifikasi
-
-
-import com.example.agendaukmtaekondo.notifikasi.Constants.Companion.CONTENT_TYPE
-import com.example.agendaukmtaekondo.notifikasi.Constants.Companion.SERVER_KEY
+package com.example.agendaukmtaekondo.notif
+import com.example.agendaukmtaekondo.notif.Constants.Companion.CONTENT_TYPE
+import com.example.agendaukmtaekondo.notif.Constants.Companion.SERVER_KEY
 import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.Body

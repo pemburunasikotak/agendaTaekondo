@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/warnabiru"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".anggota.HasilRapatAnggota">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -30,9 +30,10 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:background="@drawable/ic_abuabulebihgede"
-        android:orientation="vertical">a
+        android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tv_hasilrapatAnggota"
             android:layout_width="332dp"
             android:layout_height="498dp"
             android:layout_marginTop="10dp"
@@ -43,6 +44,18 @@
             android:textColor="@color/warnahitam"
             android:textSize="15sp"
             android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/tv_nameHasilRapatAnggota"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textAllCaps="false"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:text="testjudul"
+            android:textAlignment="center"
+            android:textStyle="italic" />
+
 
     </LinearLayout>
 

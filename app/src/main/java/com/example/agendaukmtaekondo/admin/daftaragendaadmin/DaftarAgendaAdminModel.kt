@@ -2,6 +2,8 @@ package com.example.agendaukmtaekondo.admin
 
 import com.google.firebase.database.PropertyName
 
+
+//model yang digunakan
 open class DaftarAgendaAdminModel(
     var id : String =" ",
     @PropertyName(value ="nama")

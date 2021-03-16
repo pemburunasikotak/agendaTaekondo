@@ -1,6 +1,7 @@
-package com.example.agendaukmtaekondo.notifikasi
+package com.example.agendaukmtaekondo.notif
 
-import com.example.agendaukmtaekondo.notifikasi.Constants.Companion.BASE_URL
+
+import com.example.agendaukmtaekondo.notif.Constants.Companion.BASE_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

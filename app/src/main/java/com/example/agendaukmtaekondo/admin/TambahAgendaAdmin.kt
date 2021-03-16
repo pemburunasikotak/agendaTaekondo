@@ -8,6 +8,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.agendaukmtaekondo.*
 import com.example.agendaukmtaekondo.admin.model.Agenda
+import com.example.agendaukmtaekondo.notif.FirebaseService
+import com.example.agendaukmtaekondo.notif.NotificationData
+import com.example.agendaukmtaekondo.notif.PushNotification
+import com.example.agendaukmtaekondo.notif.RetrofitInstance
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.iid.FirebaseInstanceId
@@ -17,6 +21,8 @@ import kotlinx.android.synthetic.main.tambah_agenda_admin.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.launch
+
 
 class TambahAgendaAdmin : AppCompatActivity() {
     val TOPIC = "/topics/myTopic2"
@@ -24,15 +30,15 @@ class TambahAgendaAdmin : AppCompatActivity() {
     lateinit var ref : DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        ref = FirebaseDatabase.getInstance().getReference("Agenda")
+        setContentView(R.layout.tambah_agenda_admin)
         FirebaseService.sharedPref = getSharedPreferences("sharedPref", Context.MODE_PRIVATE)
         FirebaseInstanceId.getInstance().instanceId.addOnSuccessListener {
             FirebaseService.token = it.token
+            //etToken.setText(it.token)
         }
         FirebaseMessaging.getInstance().subscribeToTopic(TOPIC)
+        ref = FirebaseDatabase.getInstance().getReference("Agenda")
 
-
-        setContentView(R.layout.tambah_agenda_admin)
 
         //dari Edit Text
         val bundle = intent.extras
@@ -41,26 +47,36 @@ class TambahAgendaAdmin : AppCompatActivity() {
         et_deskripsitambahagenda.setText(bundle?.getString("desk"))
         et_loasitambahagenda.setText(bundle?.getString("lokasi"))
 
+
+
         btn_simpantambahagenda.setOnClickListener {
 
 
             //ahir dari pemangilan fungsi
             tambahdata()
 
-            val title = et_namatambahagenda.text.toString()
-            val message = et_loasitambahagenda.text.toString()
+            val title = et_namatambahagenda.text.toString().trim()
+            val message = et_deskripsitambahagenda.text.toString().trim()
+            //val recipientToken = etToken.text.toString()
+
             Log.d("testtingmasage", title)
+            //&& recipientToken.isNotEmpty()
             Toast.makeText(this, message, Toast.LENGTH_LONG)
+            //Toast.makeText(this, title, Toast.LENGTH_LONG)
+            //Toast.makeText(this, TOPIC, Toast.LENGTH_LONG)
             if(title.isNotEmpty() && message.isNotEmpty() ) {
                 PushNotification(
                     NotificationData(title, message),
                     TOPIC
                     //recipientToken
+
                 ).also {
                     sendNotification(it)
+
                     Log.d("testtingmasage", message)
                 }
             }
+
         }
 
     }
@@ -79,7 +95,9 @@ class TambahAgendaAdmin : AppCompatActivity() {
         }
     }
 
+    //Fungsi Tambah data
     private fun tambahdata() {
+        //Falidasi data yang digunakan
         if (et_namatambahagenda.text.toString().isEmpty()) {
             et_namatambahagenda.error = "Masukkan Nama Event"
             et_namatambahagenda.requestFocus()
@@ -128,6 +146,7 @@ class TambahAgendaAdmin : AppCompatActivity() {
         val lokasi = et_loasitambahagenda.text.toString().trim()
 
         val event = Agenda(userId, nama, waktu, diskripsi, lokasi)
+        //Kirim ke database
         ref.child(nama).setValue(event).addOnCompleteListener {
             Toast.makeText(this, "Sukses Tambah data ",Toast.LENGTH_LONG).show()
             val intent = Intent(this, DaftarAgendaAdmin::class.java)

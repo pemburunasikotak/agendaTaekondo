@@ -1,4 +1,4 @@
-package com.example.agendaukmtaekondo.notifikasi
+package com.example.agendaukmtaekondo.notif
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -13,7 +13,6 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import com.example.agendaukmtaekondo.R
-import com.example.agendaukmtaekondo.anggota.daftaragendaanggota.DaftarAgendaAnggota
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import kotlin.random.Random
@@ -42,7 +41,7 @@ class FirebaseService : FirebaseMessagingService() {
     override fun onMessageReceived(message: RemoteMessage) {
         super.onMessageReceived(message)
 
-        val intent = Intent(this, DaftarAgendaAnggota::class.java)
+        val intent = Intent(this, MainActivity1::class.java)
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         val notificationID = Random.nextInt()
 

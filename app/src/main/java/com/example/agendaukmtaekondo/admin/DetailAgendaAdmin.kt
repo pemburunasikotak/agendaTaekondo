@@ -18,7 +18,7 @@ class DetailAgendaAdmin : AppCompatActivity() {
         ref = FirebaseDatabase.getInstance().getReference("Agenda")
         setContentView(R.layout.detail_admin)
 
-        //dari Lihat
+        //terima paket dari Lihatdata
         val bundle = intent.extras
         tv_namaDetail.setText(bundle?.getString("nama"))
         tv_waktudetail.setText(bundle?.getString("waktu"))
@@ -28,17 +28,22 @@ class DetailAgendaAdmin : AppCompatActivity() {
         val lokasi =tv_lokasidetail.text.toString()
         Log.d("Lokasi",lokasi)
         val name = tv_namaDetail.text.toString()
+
+        //Fungsi jika button lokasi di klik
         btn_lokasi.setOnClickListener {
+            //Inten ke maps
             val  i = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps/search/$lokasi"))
             startActivity(i)
         }
-
+        //fungsi jika btn rapat di klik
         btn_hasilrapatagenda.setOnClickListener {
+            //Kirim paket data ke hasilrapatAdmin
             val name = tv_namaDetail
             val bundel = Bundle()
             bundel.putString("nama",name.text.toString())
             val intent= Intent(this, HasilRapatAdmin::class.java)
             intent.putExtras(bundel)
+            //inten ke hasil rapat
             startActivity(intent)
         }
     }

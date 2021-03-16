@@ -81,7 +81,6 @@ class RegistrasiAnggota : AppCompatActivity() {
             if (task.isSuccessful) {
                 val user = auth.currentUser
                 user?.sendEmailVerification()
-
                     ?.addOnCompleteListener { //task ->
                         Log.d("test",user.toString())
                         if (task.isSuccessful) {
@@ -98,11 +97,8 @@ class RegistrasiAnggota : AppCompatActivity() {
                     baseContext, "Ulang Lagi",
                     Toast.LENGTH_SHORT
                 ).show()
-
             }
             //Firebase database
-
-
         }
     }
 
